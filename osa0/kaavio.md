@@ -1,13 +1,12 @@
-```mermaid
 sequenceDiagram
     participant browser
     participant server
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    Note left of server: Server processes the submitted form data and creates a new object, then adds it to the table.
-    server->>browser: redirect (HTTP 302) to https://studies.cs.helsinki.fi//exampleapp/notes
-    deacivate server
+    Note left of server: Server processes the submitted form data and creates a new object, then adds it to the table
+    server-->>browser: redirect (HTTP 302) to https://studies.cs.helsinki.fi//exampleapp/notes
+    deactivate server
     
     Note right of browser: Browser follows the redirect
 
