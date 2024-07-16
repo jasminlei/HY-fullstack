@@ -38,18 +38,18 @@ const App = () => {
   ]
 
   const [selected, setSelected] = useState(0)
-  const [votes, setVotes] = useState(Array(8).fill(0));
+  const [votes, setVotes] = useState(Array(8).fill(0))
 
 
   const handleNextAnecdote = () => {
-    const randomNumber = Math.floor(Math.random() * 8);
+    const randomNumber = Math.floor(Math.random() * 8)
     setSelected(randomNumber)
   }
 
   const handleVote = () => {
-    const newVotes = [...votes];
-    newVotes[selected] += 1;
-    setVotes(newVotes);
+    const newVotes = [...votes]
+    newVotes[selected] += 1
+    setVotes(newVotes)
   }
 
   return (
